@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MainTableSeed::class);
         $this->call(UserTableSeed::class);
         $this->call(ImagesTableSeed::class);
+        $this->call(ContentTableSeed::class);
 
 //        User::factory()->create([
 //            'name' => 'Test User',

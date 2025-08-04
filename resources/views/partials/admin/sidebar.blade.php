@@ -50,6 +50,14 @@
                                     <span class="menu-title">Images</span>
                                 </a>
 
+                        <a class="menu-link {{ request()->routeIs('admin.content*') ? 'active' : '' }}"
+                                   href="{{ route('admin.content') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                    <span class="menu-title">Content</span>
+                                </a>
+
 
 {{--                                <a class="menu-link {{ request()->routeIs('admin.case.blog*') ? 'active' : '' }}"--}}
 {{--                                   href="{{ route('admin.case.blog') }}">--}}

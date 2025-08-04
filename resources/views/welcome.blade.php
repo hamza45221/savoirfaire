@@ -629,7 +629,7 @@
             <div class="loader__header">
                 <p> Knowing by doing <br> — SavoirFaire© </p>
                 <div class="content-right">
-                    <p> Digital &amp; Branding Design <br> Photography &amp; Film Production </p>
+                    <p> Digital & Branding Design <br> Photography & Film Production </p>
                     <p> Founded in 2020 <br> Brooklyn, NY </p>
                 </div>
             </div>
@@ -731,7 +731,7 @@
     </div><!--]-->
 </div>
 <script>
-    window.welcome_text='Abc'
+    window.welcome_text = {!! json_encode($images->pluck('image')) !!};
 </script>
 <script>window.__NUXT__ = (function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r) {
         return {
@@ -761,7 +761,8 @@
                             edit: {x: q, y: q, zoom: 1, background: "#fff"}
                         }
                     }
-                }, homepage: {
+                },
+                homepage: {
                     id: "Y_OWURAAACcA-xTO",
                     uid: j,
                     url: j,
@@ -775,116 +776,30 @@
                     lang: p,
                     alternate_languages: [],
                     data: {
-                        desktop_images: [{
-                            media: {
-                                link_type: a,
-                                key: "d6b58057-bb90-4dcd-880b-727e417d3e37",
-                                kind: c,
-                                id: "aHCDXEMqNJQqHxu4",
-                                url: "storage/uploads/N4VYLowMkuyFcV8rVFTzHbnezGbX5AZ7LqNyXkvG.jpg",
-                                name: "D-Aerflo-001.png",
-                                size: "1050885",
-                                width: i,
-                                height: d
-                            }, starting_point: k
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "230e0bde-33e9-4dbc-a0f6-37273eab6a2a",
-                                kind: e,
-                                id: "aHCDXkMqNJQqHxu5",
-                                url: "storage/uploads/N4VYLowMkuyFcV8rVFTzHbnezGbX5AZ7LqNyXkvG.jpg",
-                                name: "D-Aerflo-002.webm",
-                                size: "1532805"
-                            }, starting_point: b
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "f3783035-3686-4889-90b2-919b6cc038d7",
-                                kind: e,
-                                id: "aHCDX0MqNJQqHxu6",
-                                url: "storage/uploads/N4VYLowMkuyFcV8rVFTzHbnezGbX5AZ7LqNyXkvG.jpg",
-                                name: "D-Aerflo-003.webm",
-                                size: "3438978"
-                            }, starting_point: b
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "c835eb16-b5c3-490a-a77b-8764f2963549",
-                                kind: c,
-                                id: "aHCDYEMqNJQqHxu7",
-                                url: "https://images.prismic.io/savoir-faire/aHCDYEMqNJQqHxu7_D-Aerflo-004.png?auto=format,compress?auto=compress,format",
-                                name: "D-Aerflo-004.png",
-                                size: "981925",
-                                width: h,
-                                height: d
-                            }, starting_point: b
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "744f37cd-6dbf-4ce4-84ca-ebf04e3fb3f2",
-                                kind: e,
-                                id: "aHCDYUMqNJQqHxu8",
-                                url: "https:\u002F\u002Fsavoir-faire.cdn.prismic.io\u002Fsavoir-faire\u002FaHCDYUMqNJQqHxu8_D-Aerflo-005.webm",
-                                name: "D-Aerflo-005.webm",
-                                size: "1414760"
-                            }, starting_point: b
-                        },{
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "4296e514-aa56-4d80-a5e8-a50ec85134aa",
-                                kind: c,
-                                id: "ZbC6BBEAACEA9y3i",
-                                url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002F7249e233-b5f1-4d0d-8f23-04c5c76cb1ca_M-Sustain-0004.webp?auto=compress,format",
-                                name: "M-Sustain-0004.webp",
-                                size: "35184",
-                                width: f,
-                                height: g
-                            },
-                            starting_point: b
-                        }, {
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "479ed38f-b90e-4dfe-9354-e3e4619895b6",
-                                kind: c,
-                                id: "ZbC6EhEAACEA9y38",
-                                url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002F5f0dd8cd-5567-4fca-8fe1-c860d39a9bb0_M-SN-0001.webp?auto=compress,format",
-                                name: "M-SN-0001.webp",
-                                size: "52552",
-                                width: f,
-                                height: g
-                            },
-                            starting_point: b
-                        }, {
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "aa481669-ef5a-4015-844e-44d8180cfca2",
-                                kind: c,
-                                id: "ZbC6GBEAAB8A9y4F",
-                                url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002F7b818e1d-1712-4247-bfcc-808e8c581c4d_M-SN-0002.webp?auto=compress,format",
-                                name: "M-SN-0002.webp",
-                                size: "54514",
-                                width: f,
-                                height: g
-                            },
-                            starting_point: b
-                        }, {
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "9514a287-22aa-4f7f-994f-bf9297d0324a",
-                                kind: e,
-                                id: "ZbC6HhEAAB4A9y4O",
-                                url: "https:\u002F\u002Fsavoir-faire.cdn.prismic.io\u002Fsavoir-faire\u002F0a94b25c-a50d-424c-933a-f2cf3ef07648_M-SN-0003.mp4",
-                                name: "M-SN-0003.mp4",
-                                size: "611905"
-                            },
-                            starting_point: b
-                        }]
+                        desktop_images: [
+                                @foreach ($images as $image)
+                            {
+                                media: {
+                                    link_type: a,
+                                    key: "d6b58057-bb90-4dcd-880b-727e417d3e37",
+                                    kind: c,
+                                    id: "aHCDXEMqNJQqHxu4",
+                                    url: '{{ $image->image }}',
+                                    name: "D-Aerflo-001.png",
+                                    size: "1050885",
+                                    width: i,
+                                    height: d
+                                },
+                                starting_point: k
+                            }@if (!$loop->last),@endif
+                            @endforeach,
+                            {
+                                media: { link_type: a },
+                                starting_point: b
+                            }
+                        ]
                     }
+
                 }
             },
             state: {},
@@ -907,6 +822,10 @@
             }
         }
     }("Media", false, "image", "1800", "file", "750", "1624", "1600", "3200", null, true, "375", "812", "1270", "meta", "fr-fr", 0, "homepage"))</script>
+
+
+
+
 <script type="module" src="{{asset('_nuxt/entry.70905c58.js')}}" crossorigin></script>
 <script type="module" src="{{ asset('_nuxt/default.3d2a488b.js') }}" crossorigin></script>
 <script type="module" src="{{ asset('_nuxt/index.178e4001.js') }}" crossorigin></script>
