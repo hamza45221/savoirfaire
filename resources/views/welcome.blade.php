@@ -620,17 +620,470 @@
             top: 8rem
         }
     </style>
+
+    -------- popup ==================
+    <style>
+        #disclosureModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.823);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .modal-custom {
+            max-width: 985px;
+            background-color: #fff;
+            border-radius: 0;
+            padding: 0px;
+            margin: 100px auto;
+        }
+
+        .modal-header h2 {
+            font-size: 40px;
+            font-weight: 400;
+            color: black;
+            margin-bottom: 15px;
+            line-height: 40px;
+            letter-spacing: -2px;
+        }
+
+        .modal-body {
+            padding: 0px 24px;
+            padding-left: 55px;
+        }
+
+        .modal-body p {
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 15px !important;
+        }
+
+        .model-scroll h2 {
+            font-size: 30px !important;
+        }
+
+        .btn-accept {
+            background-color: #1e2430;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            font-weight: bold;
+            border-radius: 0;
+        }
+
+        .btn:hover {
+            background-color: #1e2430;
+            color: white;
+        }
+
+
+        .btn-decline {
+            background: none;
+            color: #6c757d;
+            text-decoration: underline;
+            border: none;
+            margin-left: 20px;
+        }
+
+        .btn-decline:hover {
+            background-color: white !important;
+            color: #6c757d !important;
+        }
+
+        .disclosure-box {
+            background-color: #f5f4f2;
+            padding: 40px 50px;
+            margin-top: 30px;
+        }
+
+        .disclosure-box p {
+            margin: 0;
+            color: #000;
+        }
+
+        .logo {
+            text-align: right;
+            font-weight: 500;
+            letter-spacing: 3px;
+            font-size: 25px;
+            padding: 36px 55px;
+            color: black;
+        }
+
+        .model-scroll {
+            overflow: auto;
+            height: 160px;
+            padding-right: 120px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #393939;
+        }
+
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* ====================== secong ========================= */
+
+        .modal-custom-second {
+            background: white;
+            padding: 28px;
+            width: 985px;
+            height: 480px;
+        }
+
+        .modal-custom-second p {
+            margin: 0;
+            font-size: 16px;
+            color: black;
+
+        }
+
+        .second-page-back-link {
+            color: #3a4355;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            font-size: 15px;
+        }
+
+        .second-page-back-link:hover {
+            text-decoration: underline;
+        }
+
+        .second-page-title {
+            font-size: 58px;
+            font-weight: 500;
+            margin-top: 20px;
+            color: black;
+            margin-bottom: 15px;
+            line-height: 40px;
+            letter-spacing: -2px;
+        }
+
+        .second-page-subtitle {
+            font-size: 20px !important;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .second-page-section-title {
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        .second-page-right-align {
+            text-align: right;
+        }
+
+        .second-page-logo {
+            font-size: 25px;
+            color: black;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .second-page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+        }
+
+        p a {
+            color: black;
+            font-size: 15px !important;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .model-step-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-top: 40px;
+        }
+
+
+        .swiper {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        .swiper-slide {
+            width: auto;
+            padding: 0 50px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 0;
+            margin: 10px 0;
+            white-space: nowrap;
+        }
+
+
+        @media (max-width: 768px) {
+            .second-page-right-align {
+                text-align: left;
+            }
+
+            .second-page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+        .preloader {
+            font-family: 'arialregular';
+        }
+
+        .cta {
+            border: 1px solid white;
+            max-width: 300px;
+            padding: 5px 10px;
+        }
+
+        .cta img {
+            width: 20px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="{{ asset('loader-assets/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('loader-assets/loader.css') }}" />
+    <!-- Splitting + GSAP -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
+
+<div id="popup" class="popup">
+    <div class="popup__bg" id="popup-bg"></div>
+    <div class="popup__close" id="popup-close" data-link>Close</div>
+    <div class="popup__element" id="ajax-popup"></div>
+</div>
+
+
+<div id="disclosureModal" style="display: none;">
+    <div class="modal-custom page-content active" id="page1">
+        <div class="logo">{{ $popup->main_title }}</div>
+
+        <div class="modal-body">
+            <div class="model-scroll">
+                {!! $popup->description !!}
+            </div>
+            <div style="margin-top: 20px;">
+                <button class="btn btn-accept"  style="cursor: pointer"  id="acceptBtn">I Accept</button>
+                <button class="btn btn-decline" style="cursor: pointer" id="declineBtn">I Do Not Accept</button>
+            </div>
+        </div>
+        <div class="disclosure-box">
+            <h6 class="fw-bold mb-2" style="font-size: 20px !important;">{{ $popup->footer_title }}</h6>
+            <p style="font-size: 15px !important;" >{!! $popup->footer_desc  !!}</p>
+        </div>
+    </div>
+    <!-- Hidden second page -->
+    <div id="page2" class="modal-custom-second" style="display: none;">
+        <div class="second-page-header">
+            <a href="#" class="second-page-back-link" onclick="goBackToPage1()">
+                <i class="fa-solid fa-angle-left me-2"></i><span style="text-decoration: underline;">Back</span>
+            </a>
+            <div class="second-page-logo">
+                {{ $popup->main_title }}
+            </div>
+        </div>
+
+        <h1 class="second-page-title">{{ $popup->page2_heading }}</h1>
+        <p class="second-page-subtitle pb-4">{{ $popup->page2_sub_heading }} </p>
+
+        <div class="model-scroll py-0" style="height: 230px !important;">
+
+            @php
+                $titles = json_decode($popup->page2_detail_title ?? '[]', true);
+                $descs  = json_decode($popup->page2_detail_desc ?? '[]', true);
+            @endphp
+
+            @foreach($titles as $index => $title)
+                <div class="row mb-4" style="display: flex; justify-content: space-between; margin-top: 24px">
+                    <div class="col-md-6">
+                        <p class="second-page-section-title">{{ $title }}</p>
+                    </div>
+                    <div class="col-md-6 second-page-left-align"
+                         style="display: flex;justify-content: start;width: 25%;align-items: start;flex-direction: column;">
+                        {!! $descs[$index] ?? '' !!}
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        if (!localStorage.getItem('disclosureAccepted')) {
+            document.getElementById('disclosureModal').style.display = 'flex';
+        }
+    };
+
+    // Handle Accept
+    if (document.getElementById('acceptBtn')) {
+        document.getElementById('acceptBtn').addEventListener('click', function () {
+            localStorage.setItem('disclosureAccepted', 'true');
+            document.getElementById('disclosureModal').style.display = 'none';
+        });
+    }
+
+    // Decline button - show next page
+    if (document.getElementById('declineBtn')) {
+        document.getElementById('declineBtn').addEventListener('click', function () {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        });
+    }
+
+    function showPage(pageId) {
+        document.querySelectorAll('.page-content').forEach(div => {
+            div.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        alert('Cookies Accepted!');
+    }
+
+    function goBackToPage1() {
+        document.getElementById('page2').style.display = 'none';
+        document.getElementById('page1').style.display = 'block';
+    }
+
+
+    // ======= aI agree cookies ============
+
+
+    if (localStorage.getItem('custom_cookie_consent') === 'true') {
+        document.getElementById('customAcceptBanner').style.display = 'none';
+    }
+    document.getElementById('customCookiesAgree').addEventListener('click', function () {
+        localStorage.setItem('custom_cookie_consent', 'true');
+        document.getElementById('customAcceptBanner').style.display = 'none';
+    });
+
+
+    // ============= swiper ===========
+
+
+    const swiper = new Swiper(".marqueeSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+        freeMode: true,
+        freeModeMomentum: false,
+        allowTouchMove: false,
+        speed: 4000, // increase for smoother slow scroll
+        autoplay: {
+            disableOnInteraction: false,
+        },
+    });
+    setTimeout(function () {
+        document.getElementById('preloader').remove();
+    }, 5000)
+
+</script>
+
+
+
+
+{{--------  preloader  -------------}}
+
+<div id="preloader" class="preloader">
+    <div class="container">
+        <h1 class="entry-title" data-splitting="lines">
+            <!-- Line 1 -->
+            <div class="splitted-title__line" style="gap: 5vw !important;">
+                <span class="counter-inline" id="counterText">0 - 100</span>
+                <span class="word">Your</span>
+            </div>
+            <!-- Line 2 -->
+            <div class="splitted-title__line">
+                <span class="word">web</span>
+                <span class="word">experience</span>
+            </div>
+            <!-- Line 3 -->
+            <div class="splitted-title__line">
+                <span class="word">is</span>
+                <span class="word">loading</span>
+                <span class="word">right</span>
+                <span class="word" id="nowWord">now</span>
+            </div>
+        </h1>
+        <div class="intro-section__description">
+            <p>Please wait<br>a few seconds.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="__nuxt"><!--[-->
     <div class="l__layout">
         <div class="l__loader">
             <div class="loader__header">
-                <p> Knowing by doing <br> — SavoirFaire© </p>
+                <p> {{ $content->first_heading1 }} <br> — {{ $content->first_heading2 }}© </p>
                 <div class="content-right">
-                    <p> Digital &amp; Branding Design <br> Photography &amp; Film Production </p>
-                    <p> Founded in 2020 <br> Brooklyn, NY </p>
+                    <p> {{ $content->second_heading1 }} <br> {{ $content->second_heading2 }} </p>
+                    <p> {{ $content->third_heading1 }} <br>  {{ $content->third_heading2 }} </p>
                 </div>
             </div>
             <h1 class="loader__percent">0</h1>
@@ -646,8 +1099,8 @@
                                                             data-v-4d6a0aa6>
             <div class="mobile__landscape--content" data-v-4d6a0aa6><img src="_nuxt/rotate-mobile.0561dc60.svg"
                                                                          alt="Rotate Mobile" data-v-4d6a0aa6>
-                <h2 data-v-4d6a0aa6>Oops!</h2>
-                <p data-v-4d6a0aa6> We didn’t plan for this... Please rotate your phone back to vertical. </p>
+                <h2 data-v-4d6a0aa6>{{ $content->mobile_popup_title }}</h2>
+                <p data-v-4d6a0aa6> {{ $content->mobile_popup_desc }} </p>
             </div>
         </div>
         <div class="l__preloader" data-v-a56e7aa4><img id="preloader__star-white" class="preloader__star"
@@ -731,7 +1184,7 @@
     </div><!--]-->
 </div>
 <script>
-    window.welcome_text='Abc'
+    window.welcome_text = {!! json_encode($images->pluck('image')) !!};
 </script>
 <script>window.__NUXT__ = (function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r) {
         return {
@@ -761,7 +1214,8 @@
                             edit: {x: q, y: q, zoom: 1, background: "#fff"}
                         }
                     }
-                }, homepage: {
+                },
+                homepage: {
                     id: "Y_OWURAAACcA-xTO",
                     uid: j,
                     url: j,
@@ -775,116 +1229,30 @@
                     lang: p,
                     alternate_languages: [],
                     data: {
-                        desktop_images: [{
-                            media: {
-                                link_type: a,
-                                key: "d6b58057-bb90-4dcd-880b-727e417d3e37",
-                                kind: c,
-                                id: "aHCDXEMqNJQqHxu4",
-                                url: "storage/uploads/N4VYLowMkuyFcV8rVFTzHbnezGbX5AZ7LqNyXkvG.jpg",
-                                name: "D-Aerflo-001.png",
-                                size: "1050885",
-                                width: i,
-                                height: d
-                            }, starting_point: k
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "230e0bde-33e9-4dbc-a0f6-37273eab6a2a",
-                                kind: e,
-                                id: "aHCDXkMqNJQqHxu5",
-                                url: "storage/uploads/N4VYLowMkuyFcV8rVFTzHbnezGbX5AZ7LqNyXkvG.jpg",
-                                name: "D-Aerflo-002.webm",
-                                size: "1532805"
-                            }, starting_point: b
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "f3783035-3686-4889-90b2-919b6cc038d7",
-                                kind: e,
-                                id: "aHCDX0MqNJQqHxu6",
-                                url: "storage/uploads/N4VYLowMkuyFcV8rVFTzHbnezGbX5AZ7LqNyXkvG.jpg",
-                                name: "D-Aerflo-003.webm",
-                                size: "3438978"
-                            }, starting_point: b
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "c835eb16-b5c3-490a-a77b-8764f2963549",
-                                kind: c,
-                                id: "aHCDYEMqNJQqHxu7",
-                                url: "https://images.prismic.io/savoir-faire/aHCDYEMqNJQqHxu7_D-Aerflo-004.png?auto=format,compress?auto=compress,format",
-                                name: "D-Aerflo-004.png",
-                                size: "981925",
-                                width: h,
-                                height: d
-                            }, starting_point: b
-                        }, {
-                            media: {
-                                link_type: a,
-                                key: "744f37cd-6dbf-4ce4-84ca-ebf04e3fb3f2",
-                                kind: e,
-                                id: "aHCDYUMqNJQqHxu8",
-                                url: "https:\u002F\u002Fsavoir-faire.cdn.prismic.io\u002Fsavoir-faire\u002FaHCDYUMqNJQqHxu8_D-Aerflo-005.webm",
-                                name: "D-Aerflo-005.webm",
-                                size: "1414760"
-                            }, starting_point: b
-                        },{
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "4296e514-aa56-4d80-a5e8-a50ec85134aa",
-                                kind: c,
-                                id: "ZbC6BBEAACEA9y3i",
-                                url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002F7249e233-b5f1-4d0d-8f23-04c5c76cb1ca_M-Sustain-0004.webp?auto=compress,format",
-                                name: "M-Sustain-0004.webp",
-                                size: "35184",
-                                width: f,
-                                height: g
-                            },
-                            starting_point: b
-                        }, {
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "479ed38f-b90e-4dfe-9354-e3e4619895b6",
-                                kind: c,
-                                id: "ZbC6EhEAACEA9y38",
-                                url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002F5f0dd8cd-5567-4fca-8fe1-c860d39a9bb0_M-SN-0001.webp?auto=compress,format",
-                                name: "M-SN-0001.webp",
-                                size: "52552",
-                                width: f,
-                                height: g
-                            },
-                            starting_point: b
-                        }, {
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "aa481669-ef5a-4015-844e-44d8180cfca2",
-                                kind: c,
-                                id: "ZbC6GBEAAB8A9y4F",
-                                url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002F7b818e1d-1712-4247-bfcc-808e8c581c4d_M-SN-0002.webp?auto=compress,format",
-                                name: "M-SN-0002.webp",
-                                size: "54514",
-                                width: f,
-                                height: g
-                            },
-                            starting_point: b
-                        }, {
-                            media: {link_type: a},
-                            media_background: {
-                                link_type: a,
-                                key: "9514a287-22aa-4f7f-994f-bf9297d0324a",
-                                kind: e,
-                                id: "ZbC6HhEAAB4A9y4O",
-                                url: "https:\u002F\u002Fsavoir-faire.cdn.prismic.io\u002Fsavoir-faire\u002F0a94b25c-a50d-424c-933a-f2cf3ef07648_M-SN-0003.mp4",
-                                name: "M-SN-0003.mp4",
-                                size: "611905"
-                            },
-                            starting_point: b
-                        }]
+                        desktop_images: [
+                                @foreach ($images as $image)
+                            {
+                                media: {
+                                    link_type: a,
+                                    key: "d6b58057-bb90-4dcd-880b-727e417d3e37",
+                                    kind: c,
+                                    id: "aHCDXEMqNJQqHxu4",
+                                    url: '{{ $image->image }}',
+                                    name: "D-Aerflo-001.png",
+                                    size: "1050885",
+                                    width: i,
+                                    height: d
+                                },
+                                starting_point: k
+                            }@if (!$loop->last),@endif
+                            @endforeach,
+                            {
+                                media: { link_type: a },
+                                starting_point: b
+                            }
+                        ]
                     }
+
                 }
             },
             state: {},
@@ -907,6 +1275,10 @@
             }
         }
     }("Media", false, "image", "1800", "file", "750", "1624", "1600", "3200", null, true, "375", "812", "1270", "meta", "fr-fr", 0, "homepage"))</script>
+
+
+
+
 <script type="module" src="{{asset('_nuxt/entry.70905c58.js')}}" crossorigin></script>
 <script type="module" src="{{ asset('_nuxt/default.3d2a488b.js') }}" crossorigin></script>
 <script type="module" src="{{ asset('_nuxt/index.178e4001.js') }}" crossorigin></script>

@@ -1,9 +1,13 @@
 <?php
 
+use App\Models\Images;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $images = Images::all();
+    $popup = \App\Models\Popup::first();
+    $content = \App\Models\Content::first();
+    return view('welcome',compact('images','content','popup'));
 });
 
 Auth::routes();
@@ -25,11 +29,13 @@ Route::group(['prefix'=>'admin'], function () {
         Route::get('/delete/{id}',[\App\Http\Controllers\Admin\ImageController::class,'delete'])->name('admin.image.delete');
     });
 //
-//    Route::group(['prefix' => 'contact'], function () {
-//        Route::get('/', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact');
-//        Route::post('/store', [App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
-//    });
+    Route::group(['prefix' => 'content'], function () {
+        Route::get('/', [App\Http\Controllers\Admin\ContentController::class, 'index'])->name('admin.content');
+        Route::post('/store', [App\Http\Controllers\Admin\ContentController::class, 'store'])->name('admin.content.store');
+    });
 
 
+    Route::get('/popup', [\App\Http\Controllers\Admin\PopupController::class, 'popup'])->name('admin.popup');
+    Route::post('/popup-store', [\App\Http\Controllers\Admin\PopupController::class, 'popupStore'])->name('admin.popup.store');
 
 });
