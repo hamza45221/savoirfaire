@@ -741,7 +741,7 @@
                     uid: j,
                     url: j,
                     type: o,
-                    href: "https:\u002F\u002Fsavoir-faire.cdn.prismic.io\u002Fapi\u002Fv2\u002Fdocuments\u002Fsearch?ref=aHEskxEAACcAb6nW&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22ZAhrmRAAABWUVq4b%22%29+%5D%5D",
+                    href: "https://savoir-faire.cdn.prismic.io/savoir-faire/aHCDYUMqNJQqHxu8_D-Aerflo-005.webm",
                     tags: [],
                     first_publication_date: "2023-03-08T11:03:56+0000",
                     last_publication_date: "2023-09-12T20:44:34+0000",
@@ -756,7 +756,7 @@
                             dimensions: {width: 1600, height: 900},
                             alt: j,
                             copyright: j,
-                            url: "https:\u002F\u002Fimages.prismic.io\u002Fsavoir-faire\u002Fa9fc8a41-050a-4407-9b5a-a4b8b53489e7_SavoirFaire.gif?auto=compress,format",
+                            url: "https://savoir-faire.cdn.prismic.io/savoir-faire/aHCDXkMqNJQqHxu5_D-Aerflo-002.webm",
                             id: "ZQDNoBIAAB4Amo3N",
                             edit: {x: q, y: q, zoom: 1, background: "#fff"}
                         }
