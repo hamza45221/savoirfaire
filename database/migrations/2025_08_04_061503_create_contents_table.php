@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('mobile_popup_title')->nullable();
             $table->text('mobile_popup_desc')->nullable();
             $table->string('main_title')->nullable();
-            $table->string('main_desc')->nullable();
+            $table->text('main_desc')->nullable();
             $table->timestamps();
         });
     }

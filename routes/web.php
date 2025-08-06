@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $images = Images::all();
-    return view('welcome',compact('images'));
+    $popup = \App\Models\Popup::first();
+    $content = \App\Models\Content::first();
+    return view('welcome',compact('images','content','popup'));
 });
 
 Auth::routes();
@@ -33,5 +35,7 @@ Route::group(['prefix'=>'admin'], function () {
     });
 
 
+    Route::get('/popup', [\App\Http\Controllers\Admin\PopupController::class, 'popup'])->name('admin.popup');
+    Route::post('/popup-store', [\App\Http\Controllers\Admin\PopupController::class, 'popupStore'])->name('admin.popup.store');
 
 });
