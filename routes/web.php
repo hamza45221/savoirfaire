@@ -2,11 +2,31 @@
 
 use App\Models\Images;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 Route::get('/', function () {
-    $images = Images::all();
+//    $images = Images::all();
     $popup = \App\Models\Popup::first();
     $content = \App\Models\Content::first();
+
+    $b = true; // Example value
+    $e = "image"; // Example value
+
+    $images = \App\Models\Images::all()->map(function ($img) use ($b, $e) {
+        return [
+            'media' => [
+                'link_type' => 'media',
+                'key' => (string) Str::uuid(),
+                'kind' => $e,
+                'id' => 'img_' . $img->id,
+                'url' => asset($img->image),
+                'name' => basename($img->path),
+                'size' => $img->size ?? 0,
+            ],
+            'starting_point' => $b
+        ];
+    });
+
     return view('welcome',compact('images','content','popup'));
 });
 
