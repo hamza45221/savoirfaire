@@ -18,7 +18,7 @@ class ContentTableSeed extends Seeder
         $content->first_heading2 = 'SavoirFaire';
         $content->second_heading1 = 'Digital & Branding Design';
         $content->second_heading2 = 'Photography & Film Production ';
-        $content->third_heading1 = 'Founded in 2020 ';
+        $content->third_heading1 = 'Founded in 2020';
         $content->third_heading2 = 'Brooklyn, NY';
         $content->mobile_popup_title = 'Oops!';
         $content->mobile_popup_desc = 'We didn’t plan for this... Please rotate your phone back to vertical.';
